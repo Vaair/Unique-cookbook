@@ -1,5 +1,5 @@
 //
-//  Unique_cookbookTests.swift
+//  UniqueCookbookTests.swift
 //  Unique cookbookTests
 //
 //  Created by Лера Тарасенко on 29.09.2022.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Unique_cookbook
 
-final class Unique_cookbookTests: XCTestCase {
+final class UniqueCookbookTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

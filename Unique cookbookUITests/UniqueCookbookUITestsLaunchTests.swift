@@ -1,5 +1,5 @@
 //
-//  Unique_cookbookUITestsLaunchTests.swift
+//  UniqueCookbookUITestsLaunchTests.swift
 //  Unique cookbookUITests
 //
 //  Created by Лера Тарасенко on 29.09.2022.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class Unique_cookbookUITestsLaunchTests: XCTestCase {
+final class UniqueCookbookUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
