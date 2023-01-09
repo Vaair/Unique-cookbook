@@ -14,8 +14,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupTabBar()
         return true
+    }
+
+    private func setupTabBar() {
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.CustomColor.grey
+            appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
+                .foregroundColor: UIColor.CustomColor.lightGray,
+                NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
+            ]
+            appearance.stackedLayoutAppearance.normal.iconColor = UIColor.CustomColor.lightGray
+            
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
+                .foregroundColor: UIColor.CustomColor.green,
+                NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
+            ]
+            appearance.stackedLayoutAppearance.selected.iconColor = UIColor.CustomColor.green
+
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
+        } else {
+            UITabBar.appearance().barTintColor = UIColor.CustomColor.grey
+            UITabBar.appearance().unselectedItemTintColor = UIColor.CustomColor.lightGray
+            UITabBar.appearance().tintColor = UIColor.CustomColor.green
+            UITabBarItem.appearance().setTitleTextAttributes(
+                [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
+                for: .normal
+            )
+            UITabBarItem.appearance().setTitleTextAttributes(
+                [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
+                for: .selected
+            )
+        }
     }
 
     // MARK: UISceneSession Lifecycle
@@ -78,4 +112,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
