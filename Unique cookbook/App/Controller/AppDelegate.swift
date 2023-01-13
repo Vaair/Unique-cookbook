@@ -22,25 +22,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 15.0, *) {
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.CustomColor.grey
+            appearance.backgroundColor = UIColor.CustomColors.gray
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-                .foregroundColor: UIColor.CustomColor.lightGray,
+                .foregroundColor: UIColor.CustomColors.lightGray,
                 NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
             ]
-            appearance.stackedLayoutAppearance.normal.iconColor = UIColor.CustomColor.lightGray
+            appearance.stackedLayoutAppearance.normal.iconColor = UIColor.CustomColors.lightGray
             
             appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-                .foregroundColor: UIColor.CustomColor.green,
+                .foregroundColor: UIColor.CustomColors.green,
                 NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
             ]
-            appearance.stackedLayoutAppearance.selected.iconColor = UIColor.CustomColor.green
+            appearance.stackedLayoutAppearance.selected.iconColor = UIColor.CustomColors.green
 
             UITabBar.appearance().standardAppearance = appearance
+            #warning("Протестить автоматическую транзистентность таб и нав баров, когда будет скролл")
             UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
         } else {
-            UITabBar.appearance().barTintColor = UIColor.CustomColor.grey
-            UITabBar.appearance().unselectedItemTintColor = UIColor.CustomColor.lightGray
-            UITabBar.appearance().tintColor = UIColor.CustomColor.green
+            UITabBar.appearance().barTintColor = UIColor.CustomColors.gray
+            UITabBar.appearance().unselectedItemTintColor = UIColor.CustomColors.lightGray
+            UITabBar.appearance().tintColor = UIColor.CustomColors.green
             UITabBarItem.appearance().setTitleTextAttributes(
                 [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
                 for: .normal
