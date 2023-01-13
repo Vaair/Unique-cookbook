@@ -22,7 +22,7 @@
 		3ACB5A8A28E5BBC3003415D1 /* Unique_cookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A8828E5BBC3003415D1 /* Unique_cookbook.xcdatamodeld */; };
 		3ACB5A8C28E5BBC4003415D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB5A8B28E5BBC4003415D1 /* Assets.xcassets */; };
 		3ACB5A8F28E5BBC4003415D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB5A8D28E5BBC4003415D1 /* LaunchScreen.storyboard */; };
-		3ACB5A9A28E5BBC4003415D1 /* UniqueCookbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A9928E5BBC4003415D1 /* UniqueCookbookTests.swift */; };
+		3ACB5A9A28E5BBC4003415D1 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A9928E5BBC4003415D1 /* MainPresenterTest.swift */; };
 		3ACB5AA428E5BBC4003415D1 /* UniqueCookbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5AA328E5BBC4003415D1 /* UniqueCookbookUITests.swift */; };
 		3ACB5AA628E5BBC4003415D1 /* UniqueCookbookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5AA528E5BBC4003415D1 /* UniqueCookbookUITestsLaunchTests.swift */; };
 		8ACA4E32D0FDC32D4317DF3C /* libPods-Unique cookbook-Unique cookbookUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9D5C2B1E93BAE680E790F /* libPods-Unique cookbook-Unique cookbookUITests.a */; };
@@ -70,7 +70,7 @@
 		3ACB5A8E28E5BBC4003415D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ACB5A9028E5BBC4003415D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ACB5A9528E5BBC4003415D1 /* Unique cookbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unique cookbookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ACB5A9928E5BBC4003415D1 /* UniqueCookbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueCookbookTests.swift; sourceTree = "<group>"; };
+		3ACB5A9928E5BBC4003415D1 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		3ACB5A9F28E5BBC4003415D1 /* Unique cookbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unique cookbookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACB5AA328E5BBC4003415D1 /* UniqueCookbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueCookbookUITests.swift; sourceTree = "<group>"; };
 		3ACB5AA528E5BBC4003415D1 /* UniqueCookbookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueCookbookUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		3ACB5A9828E5BBC4003415D1 /* Unique cookbookTests */ = {
 			isa = PBXGroup;
 			children = (
-				3ACB5A9928E5BBC4003415D1 /* UniqueCookbookTests.swift */,
+				3ACB5A9928E5BBC4003415D1 /* MainPresenterTest.swift */,
 				3A0DCD3D2971BA69001395C2 /* RouterTest.swift */,
 			);
 			path = "Unique cookbookTests";
@@ -531,7 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0DCD3E2971BA69001395C2 /* RouterTest.swift in Sources */,
-				3ACB5A9A28E5BBC4003415D1 /* UniqueCookbookTests.swift in Sources */,
+				3ACB5A9A28E5BBC4003415D1 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
