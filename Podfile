@@ -3,6 +3,7 @@
 
 target 'Unique cookbook' do
   pod 'SwiftLint'
+  pod 'SnapKit'
 
   # Pods for Unique cookbook
 

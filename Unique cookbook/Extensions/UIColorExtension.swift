@@ -19,6 +19,12 @@ extension UIColor {
     }
     
     enum CustomColors {
+        static var background: UIColor {
+            getThemeColor(
+                light: .white,
+                dark: .black
+            )
+        }
         static var green: UIColor {
             getThemeColor(
                 light: #colorLiteral(red: 0, green: 0.4465118051, blue: 0.08052622527, alpha: 1),

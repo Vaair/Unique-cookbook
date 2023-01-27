@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Unique cookbook
+
+  Created by Лера Тарасенко on 13.01.2023.
+  
+*/
+
+// RU
+// AllRecipesViewController
+"all_recipe_title" = "Все рецепты";

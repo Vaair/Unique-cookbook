@@ -10,5 +10,6 @@ import UIKit
 extension UIFont {
     enum CustomFont {
         static let tabBarItem = UIFont.systemFont(ofSize: 14, weight: .medium)
+        static let recentlyCellTitle = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
 }
