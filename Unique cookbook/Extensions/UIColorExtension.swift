@@ -25,10 +25,11 @@ extension UIColor {
                 dark: .black
             )
         }
+//        #colorLiteral(red: 0.04665946215, green: 0.7452504635, blue: 0.05176623911, alpha: 1)
         static var green: UIColor {
             getThemeColor(
-                light: #colorLiteral(red: 0, green: 0.4465118051, blue: 0.08052622527, alpha: 1),
-                dark: #colorLiteral(red: 0, green: 0.7479147315, blue: 0.1208664253, alpha: 1)
+                light: #colorLiteral(red: 0.04665946215, green: 0.7452504635, blue: 0.05176623911, alpha: 1),
+                dark: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             )
         }
         static var gray: UIColor {

@@ -14,12 +14,10 @@ protocol MainViewProtocol: AnyObject {
 class MainViewController: UITabBarController {
     var presenter: MainPresenterProtocol!
 
-
-
     init(
-        allRecipesVC: AllRecipesViewController,
-        favoritesVC: FavoritesViewController,
-        searchVC: SearchViewController
+        allRecipesVC: UINavigationController,
+        favoritesVC: UINavigationController,
+        searchVC: UINavigationController
     ) {
         allRecipesVC.tabBarItem = TabBarItem.allRecipes.getTabBarItem()
         favoritesVC.tabBarItem = TabBarItem.favorites.getTabBarItem()

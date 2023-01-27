@@ -6,25 +6,53 @@
 //
 
 import UIKit
+import SnapKit
 
-class AllRecipesViewController: UIViewController {
+protocol AllRecipesViewProtocol: AnyObject {
 
+}
+
+class AllRecipesViewController: UIViewController, BaseViewControllerProtocol, AllRecipesViewProtocol {
+    var presenter: AllRecipesPresenterProtocol!
+    
+    private var collectionView: AllRecipesCollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // Do any additional setup after loading the view.
+        setupView()
+        arrangeCollectionView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        view.backgroundColor = .CustomColors.background
+        title = Localization.title
     }
-    */
+    
+    private func arrangeCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
+    }
 
+    func setCollectionView(collectionView: AllRecipesCollectionView) {
+        self.collectionView = collectionView
+        collectionView.configure()
+    }
+
+}
+
+extension AllRecipesViewController {
+    enum Constants {
+        
+    }
+    
+    enum Localization {
+        static let title = "all_recipe_title".localized
+    }
+}
+
+protocol BaseViewControllerProtocol {
+    func setupView()
 }
