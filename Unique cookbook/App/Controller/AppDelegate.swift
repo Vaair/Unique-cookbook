@@ -14,43 +14,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupNavigationBar()
         setupTabBar()
         return true
     }
+    
+    private func setupNavigationBar() {
+        let attrs = [NSAttributedString.Key.foregroundColor : UIColor.label] as [NSAttributedString.Key : Any]
+        
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().largeTitleTextAttributes = attrs
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        UINavigationBar.appearance().isTranslucent = true
+    }
 
     private func setupTabBar() {
-        if #available(iOS 15.0, *) {
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.CustomColors.gray
-            appearance.stackedLayoutAppearance.normal.titleTextAttributes = [
-                .foregroundColor: UIColor.CustomColors.lightGray,
-                NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
-            ]
-            appearance.stackedLayoutAppearance.normal.iconColor = UIColor.CustomColors.lightGray
-            
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-                .foregroundColor: UIColor.CustomColors.green,
-                NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem
-            ]
-            appearance.stackedLayoutAppearance.selected.iconColor = UIColor.CustomColors.green
-
-            UITabBar.appearance().standardAppearance = appearance
-            #warning("Протестить автоматическую транзистентность таб и нав баров, когда будет скролл")
-            UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
-        } else {
-            UITabBar.appearance().barTintColor = UIColor.CustomColors.gray
-            UITabBar.appearance().unselectedItemTintColor = UIColor.CustomColors.lightGray
-            UITabBar.appearance().tintColor = UIColor.CustomColors.green
-            UITabBarItem.appearance().setTitleTextAttributes(
-                [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
-                for: .normal
-            )
-            UITabBarItem.appearance().setTitleTextAttributes(
-                [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
-                for: .selected
-            )
-        }
+        UITabBar.appearance().tintColor = UIColor.CustomColors.green
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSAttributedString.Key.font: UIFont.CustomFont.tabBarItem],
+            for: .selected
+        )
     }
 
     // MARK: UISceneSession Lifecycle

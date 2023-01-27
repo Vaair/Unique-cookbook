@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             assembly: assembly
         )
         router.initialViewController()
+        navigationController.navigationBar.isHidden = true
 
         window?.rootViewController = navigationController
     }
