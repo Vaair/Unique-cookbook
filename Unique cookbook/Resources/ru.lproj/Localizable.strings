@@ -9,6 +9,7 @@
 // RU
 // AllRecipesViewController
 "all_recipe_title" = "Все рецепты";
+"all_recipe_new_recipe_button_title" = "Добавить рецепт";
 
 // Statuses
 "not_verified_type" = "Не проверен";

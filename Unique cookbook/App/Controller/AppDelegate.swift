@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().largeTitleTextAttributes = attrs
         UINavigationBar.appearance().titleTextAttributes = attrs
+        UINavigationBar.appearance().tintColor = .CustomColors.green
         UINavigationBar.appearance().isTranslucent = true
     }
 

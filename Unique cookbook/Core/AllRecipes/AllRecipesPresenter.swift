@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AllRecipesPresenterProtocol {
-
+    func newRecipeAction()
 }
 
 class AllRecipesPresenter: AllRecipesPresenterProtocol {
@@ -16,5 +16,9 @@ class AllRecipesPresenter: AllRecipesPresenterProtocol {
     
     required init(view: AllRecipesViewProtocol) {
         self.view = view
+    }
+    
+    func newRecipeAction() {
+        
     }
 }

@@ -9,6 +9,7 @@
 // EN
 // AllRecipesViewController
 "all_recipe_title" = "All recipes";
+"all_recipe_new_recipe_button_title" = "Add recipe";
 
 // Statuses
 "not_verified_type" = "Not verified";

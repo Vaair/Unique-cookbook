@@ -204,6 +204,7 @@
 				3A8BD21F296C29F400DB3890 /* Router.swift */,
 				3A3FAE632957312C001843A2 /* Main */,
 				3A8BD216296C287A00DB3890 /* AllRecipes */,
+				3A59BD51299104CE00C447FA /* NewRecipe */,
 				3A8BD214296C265600DB3890 /* Favorites */,
 				3A8BD215296C26DF00DB3890 /* Search */,
 				3ABC83C329840A1900E6177F /* Views */,
@@ -239,6 +240,13 @@
 				3A958401297D40B300548B42 /* CollectionViewCellPresenter.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3A59BD51299104CE00C447FA /* NewRecipe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewRecipe;
 			sourceTree = "<group>";
 		};
 		3A8BD214296C265600DB3890 /* Favorites */ = {
