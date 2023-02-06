@@ -15,8 +15,6 @@ class MainPresenter: MainPresenterProtocol {
     weak var view: MainViewProtocol?
     var router: RouterProtocol?
 
-    
-    
     required init(view: MainViewProtocol, router: RouterProtocol) {
         self.view = view
         self.router = router

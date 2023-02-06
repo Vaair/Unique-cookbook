@@ -44,5 +44,17 @@ extension UIColor {
                 dark: #colorLiteral(red: 0.674200356, green: 0.7370157838, blue: 0.8256326318, alpha: 1)
             )
         }
+        static var red: UIColor {
+            getThemeColor(
+                light: #colorLiteral(red: 0.8333944678, green: 0.1483243108, blue: 0.05370660871, alpha: 1),
+                dark: #colorLiteral(red: 0.6871898174, green: 0.1343783438, blue: 0.06157130748, alpha: 1)
+            )
+        }
+        static var orange: UIColor {
+            getThemeColor(
+                light: .orange,
+                dark: #colorLiteral(red: 0.7551332116, green: 0.435415566, blue: 0.03264793009, alpha: 1)
+            )
+        }
     }
 }

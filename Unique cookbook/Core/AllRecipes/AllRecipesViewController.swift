@@ -12,7 +12,7 @@ protocol AllRecipesViewProtocol: AnyObject {
 
 }
 
-class AllRecipesViewController: UIViewController, BaseViewControllerProtocol, AllRecipesViewProtocol {
+class AllRecipesViewController: UIViewController {
     var presenter: AllRecipesPresenterProtocol!
     
     private var collectionView: AllRecipesCollectionView!
@@ -32,7 +32,12 @@ class AllRecipesViewController: UIViewController, BaseViewControllerProtocol, Al
     private func arrangeCollectionView() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(
+                GlobalVariables.isPortrait ?
+                Constants.leadingTrailingInsetCollectionViewPortrait :
+                    Constants.leadingTrailingInsetCollectionView
+            )
         }
     }
 
@@ -40,12 +45,28 @@ class AllRecipesViewController: UIViewController, BaseViewControllerProtocol, Al
         self.collectionView = collectionView
         collectionView.configure()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.snp.updateConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(
+                GlobalVariables.isPortrait ?
+                Constants.leadingTrailingInsetCollectionViewPortrait :
+                    Constants.leadingTrailingInsetCollectionView
+            )
+        }
+    }
+    
+}
 
+extension AllRecipesViewController: AllRecipesViewProtocol {
+    
 }
 
 extension AllRecipesViewController {
     enum Constants {
-        
+        static let leadingTrailingInsetCollectionViewPortrait = GlobalVariables.screenWidth.getValue(with: 5)
+        static let leadingTrailingInsetCollectionView = GlobalVariables.screenHeight.getValue(with: 6)
     }
     
     enum Localization {
@@ -53,6 +74,3 @@ extension AllRecipesViewController {
     }
 }
 
-protocol BaseViewControllerProtocol {
-    func setupView()
-}

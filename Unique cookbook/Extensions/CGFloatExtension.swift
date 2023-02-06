@@ -9,7 +9,7 @@ import Foundation
 
 extension CGFloat {
     func getValue(with percent: Float) -> CGFloat {
-        let demical = CGFloat(percent / 100)
+        let demical = CGFloat(percent) / 100.0
         return self * demical
     }
 }

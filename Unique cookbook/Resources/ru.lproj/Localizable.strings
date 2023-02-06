@@ -9,3 +9,8 @@
 // RU
 // AllRecipesViewController
 "all_recipe_title" = "Все рецепты";
+
+// Statuses
+"not_verified_type" = "Не проверен";
+"verified_type" = "Проверен";
+"needs_improvement_type" = "Требуется доработка";

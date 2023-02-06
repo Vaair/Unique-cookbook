@@ -8,8 +8,12 @@
 import UIKit
 import SnapKit
 
+protocol CollectionViewCellProtocol: AnyObject {
+    
+}
+
 class RecentlyCollectionViewCell: UICollectionViewCell {
-    var presenter: AllCollectionViewCellPresenterProtocol!
+    var presenter: CollectionViewCellPresenterProtocol!
     
     let icon: UIImageView = {
         let image = UIImageView()
@@ -59,16 +63,17 @@ class RecentlyCollectionViewCell: UICollectionViewCell {
             make.leading.trailing.equalToSuperview()
         }
     }
-    
+}
+
+extension RecentlyCollectionViewCell: CollectionViewCellProtocol {
     
 }
 
 extension RecentlyCollectionViewCell {
     enum Constants {
-        static let reuseId = "RecentlyCollectionViewCell"
-        static let cornerRadius = GlobalConstants.screenWidth.getValue(with: 2)
+        static let cornerRadius = GlobalVariables.screenWidth.getValue(with: 2)
         static let numberOfLines = 2
-        static var bottomIconPercent: Float = 30
+        static var bottomIconPercent: Float = 35
         static let topTitleLabel: Float = 5
     }
 }

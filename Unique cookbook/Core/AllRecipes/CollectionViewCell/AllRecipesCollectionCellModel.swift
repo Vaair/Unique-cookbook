@@ -11,4 +11,5 @@ struct AllRecipesCollectionCellModel: Hashable {
     var id: String
     var title: String
     var image: UIImage
+    var status: Int
 }

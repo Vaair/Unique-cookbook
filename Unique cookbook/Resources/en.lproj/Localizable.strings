@@ -9,3 +9,8 @@
 // EN
 // AllRecipesViewController
 "all_recipe_title" = "All recipes";
+
+// Statuses
+"not_verified_type" = "Not verified";
+"verified_type" = "Verified";
+"needs_improvement_type" = "Needs improvement";

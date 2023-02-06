@@ -11,14 +11,10 @@ protocol AllRecipesPresenterProtocol {
 
 }
 
-class AllRecipesPresenter {
+class AllRecipesPresenter: AllRecipesPresenterProtocol {
     weak var view: AllRecipesViewProtocol?
     
     required init(view: AllRecipesViewProtocol) {
         self.view = view
     }
-}
-
-extension AllRecipesPresenter: AllRecipesPresenterProtocol {
-    
 }
